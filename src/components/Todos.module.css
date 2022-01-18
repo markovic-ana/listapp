@@ -1,0 +1,62 @@
+.card {
+  background-color: black;
+  background-color: #53575e4f;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    'title title'
+    'check edit'
+    'expand delete';
+  gap: 5px;
+  padding: 15px;
+  border: #fdfcec27 solid 1px;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+  font-size: 1.2em;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.checkIcon {
+  grid-area: check;
+  background-color: #53575ef2;
+  font-size: 2em;
+  justify-self: flex-end;
+  /* border-radius: 5px; */
+  cursor: pointer;
+}
+
+.deleteIcon {
+  grid-area: delete;
+  background-color: #53575ef2;
+  font-size: 2em;
+  /* border-radius: 5px; */
+  cursor: pointer;
+}
+
+.editIcon {
+  grid-area: edit;
+  background-color: #53575ef2;
+  font-size: 2em;
+  /* border-radius: 5px; */
+  cursor: pointer;
+}
+
+.expandIcon,
+.expandIcon a {
+  grid-area: expand;
+  background-color: #53575ef2;
+  font-size: 2em;
+  justify-self: flex-end;
+  /* border-radius: 5px; */
+  cursor: pointer;
+}
+
+a {
+  grid-area: expand;
+  justify-self: flex-end;
+}
