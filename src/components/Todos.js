@@ -28,7 +28,9 @@ function Todos({ todos, completeTodo, removeTodo, updateTodo }) {
       <BsCheckAll
         key={todo.id}
         onClick={() => completeTodo(todo.id)}
-        className={(todo.isComplete ? 'complete' : '', Todosstyles.checkIcon)}
+        className={
+          (todo.isComplete && Todosstyles.complete, Todosstyles.checkIcon)
+        }
       />
       <MdClose
         onClick={() => removeTodo(todo.id)}

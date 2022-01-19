@@ -60,3 +60,7 @@ a {
   grid-area: expand;
   justify-self: flex-end;
 }
+
+.complete {
+  background-color: blueviolet;
+}

@@ -1,0 +1,31 @@
+.form {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  height: 43px;
+  font-size: 1em;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+}
+
+.button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: rgba(255, 255, 255, 0.411);
+  height: 43px;
+  color: #0e253b;
+  text-transform: capitalize;
+  font-size: 1em;
+  margin-top: 20px;
+}
