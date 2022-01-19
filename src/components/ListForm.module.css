@@ -29,8 +29,9 @@
 }
 
 .editForm {
-  display: grid;
-  align-self: center;
+  position: relative;
+  display: flex;
+  left: 26%;
 }
 
 .inputEdit {
@@ -54,8 +55,4 @@
   height: 43px;
   color: #fff;
   text-transform: capitalize;
-}
-
-.completed {
-  background-color: blueviolet;
 }

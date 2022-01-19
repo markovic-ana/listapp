@@ -1,5 +1,4 @@
 .card {
-  background-color: black;
   background-color: #53575e4f;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,6 +10,20 @@
   gap: 5px;
   padding: 15px;
   border: #fdfcec27 solid 1px;
+}
+.complete {
+  background-color: rgba(0, 128, 0, 0.212);
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    'title title'
+    'check edit'
+    'expand delete';
+  gap: 5px;
+  padding: 15px;
+  text-decoration-line: line-through;
 }
 
 .title {
@@ -28,6 +41,7 @@
   justify-self: flex-end;
   /* border-radius: 5px; */
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .deleteIcon {
@@ -36,6 +50,7 @@
   font-size: 2em;
   /* border-radius: 5px; */
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .editIcon {
@@ -44,6 +59,7 @@
   font-size: 2em;
   /* border-radius: 5px; */
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .expandIcon,
@@ -54,6 +70,7 @@
   justify-self: flex-end;
   /* border-radius: 5px; */
   cursor: pointer;
+  opacity: 0.7;
 }
 
 a {
@@ -61,6 +78,15 @@ a {
   justify-self: flex-end;
 }
 
-.complete {
-  background-color: blueviolet;
+.completeIcon {
+  background-color: #5ea55e7a;
+  font-size: 2em;
+  opacity: 0.7;
+}
+
+.completeCheckIcon {
+  background-color: #5ea55e7a;
+  font-size: 2em;
+  justify-self: flex-end;
+  opacity: 0.7;
 }
