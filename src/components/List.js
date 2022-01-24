@@ -2,7 +2,7 @@ import React from 'react'
 import Liststyles from './List.module.css'
 import ListForm from './ListForm'
 import Todos from './Todos.js'
-import useLocalStorage from './hooks/useLocalStorage'
+import useLocalStorage from '../hooks/useLocalStorage'
 import { Outlet } from 'react-router-dom'
 
 function List() {
@@ -11,7 +11,6 @@ function List() {
   const addTodo = (todo) => {
     const newTodos = [todo, ...todos]
     setTodos(newTodos)
-    console.log(...todos)
   }
 
   const updateTodo = (todoId, newValue) => {
@@ -31,7 +30,7 @@ function List() {
   }
 
   const removeTodo = (id) => {
-    setTodos([...todos].filter((todo) => todo.id !== id))
+    setTodos(todos.filter((todo) => todo.id !== id))
   }
 
   return (

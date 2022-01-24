@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ListItems from './routes/ListItems'
 import { ListItem } from './routes/ListItem'
 
 ReactDOM.render(
@@ -10,9 +9,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="listitems" element={<ListItems />}>
-            <Route path=":id" element={<ListItem />} />
-          </Route>
+          <Route path="listitems/:id" element={<ListItem />} />
           <Route
             path="*"
             element={

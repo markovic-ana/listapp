@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
-import ListItemForm from './ListItemForm'
+import React from 'react'
 import { MdClose } from 'react-icons/md'
 import { MdOutlineEditNote } from 'react-icons/md'
 import Itemsstyles from './Items.module.css'
 
-function Items({ items, completeItem, updateItem, removeItem }) {
-  const [edit, setEdit] = useState({
-    id: null,
-    value: '',
-  })
-
+function Items({ items, completeItem, removeItem }) {
   return items.map((item, index) => (
     <div
       className={item.isComplete ? Itemsstyles.completed : Itemsstyles.row}
