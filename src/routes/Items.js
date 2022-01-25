@@ -23,11 +23,6 @@ function Items({ items, completeItem, removeItem }) {
             item.isComplete ? Itemsstyles.completedIcon : Itemsstyles.deleteIcon
           }
         />
-        {/* <MdOutlineEditNote
-          className={
-            item.isComplete ? Itemsstyles.completedIcon : Itemsstyles.editIcon
-          }
-        /> */}
       </div>
     </div>
   ))

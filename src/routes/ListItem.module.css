@@ -1,5 +1,5 @@
 .container {
-  margin-bottom: 10px;
+  margin-bottom: 32px;
   padding: 15px;
   background-color: #ffffff1f;
   border: 1px solid rgba(255, 255, 255, 0.411);
@@ -10,4 +10,19 @@
   font-size: 1.2em;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+.button {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: rgba(255, 255, 255, 0.411);
+  color: #0e253b;
+  font-size: 1em;
+  margin: 10px;
+  width: 96%;
+  border-radius: 4px;
+  /* border: 1px solid rgba(255, 255, 255, 0.411); */
 }
