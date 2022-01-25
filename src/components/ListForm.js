@@ -22,19 +22,17 @@ function ListForm(props) {
   return (
     <form className={ListFormstyles.form} onSubmit={handleSubmit}>
       {props.edit ? (
-        <>
-          <div className={ListFormstyles.editForm}>
-            <input
-              type="text"
-              placeholder="Update Your Title..."
-              value={input}
-              name="text"
-              className={ListFormstyles.inputEdit}
-              onChange={handleChange}
-            />
-            <button className={ListFormstyles.buttonEdit}>Rename</button>
-          </div>
-        </>
+        <div className={ListFormstyles.edit}>
+          <input
+            type="text"
+            placeholder="Update Your Title..."
+            value={input}
+            name="text"
+            className={ListFormstyles.inputEdit}
+            onChange={handleChange}
+          />
+          <button className={ListFormstyles.buttonEdit}>Rename</button>
+        </div>
       ) : (
         <>
           <input
