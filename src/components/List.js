@@ -3,12 +3,10 @@ import Liststyles from './List.module.css'
 import ListForm from './ListForm'
 import Todos from './Todos.js'
 import useLocalStorage from '../hooks/useLocalStorage'
-import { Outlet, useParams } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 function List() {
   const [todos, setTodos] = useLocalStorage('todos', [])
-
-  let params = useParams()
 
   const addTodo = (todo) => {
     const newTodos = [todo, ...todos]

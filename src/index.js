@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ListItem } from './routes/ListItem'
+import Layout from './Layout'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="listitems/:id" element={<ListItem />} />
           <Route
             path="*"
             element={
@@ -19,6 +19,14 @@ ReactDOM.render(
             }
           />
         </Route>
+        <Route
+          path="listitems/:id"
+          element={
+            <Layout>
+              <ListItem />
+            </Layout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

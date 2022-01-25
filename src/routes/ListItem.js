@@ -1,16 +1,13 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getListItem } from '../functions/getListItems'
 import ListItemstyles from './ListItem.module.css'
 import ListItemForm from './ListItemForm'
 import Items from './Items'
 import useLocalStorage from '../hooks/useLocalStorage'
-import { useEffect } from 'react/cjs/react.development'
 
 export const ListItem = () => {
   const [items, setItems] = useLocalStorage('items', [])
-
-  useEffect(() => {}, [])
 
   const params = useParams()
   const listItem = getListItem(params.id)
@@ -46,9 +43,6 @@ export const ListItem = () => {
         completeItem={completeItem}
         removeItem={removeItem}
       />
-      <Link to="/">
-        <button className={ListItemstyles.button}>Return</button>
-      </Link>
     </div>
   )
 }

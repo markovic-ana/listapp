@@ -18,10 +18,17 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 80px auto;
   overflow: auto;
   min-height: 300px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.767);
   border: #fdfcec solid 1px;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: grey;
 }

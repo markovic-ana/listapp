@@ -10,6 +10,7 @@ function App() {
         <Header />
         <List />
       </div>
+      <footer>List, 2022 &copy;</footer>
     </div>
   )
 }
