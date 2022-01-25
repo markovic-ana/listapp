@@ -1,14 +1,9 @@
 import React from 'react'
-import { useState, useEffect, useRef } from 'react/cjs/react.development'
+import { useState } from 'react/cjs/react.development'
 import ListItemFormstyles from './ListItemForm.module.css'
 
 function ListItemForm(props) {
   const [input, setInput] = useState('')
-
-  const focus = useRef(null)
-  useEffect(() => {
-    focus.current.focus()
-  })
 
   const handleChange = (e) => {
     setInput(e.target.value)
@@ -35,7 +30,6 @@ function ListItemForm(props) {
           name="text"
           className={ListItemFormstyles.input}
           onChange={handleChange}
-          ref={focus}
         />
         <button className={ListItemFormstyles.button}>Add Item</button>
       </form>

@@ -1,13 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import ListFormstyles from './ListForm.module.css'
 
 function ListForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '')
-
-  const focus = useRef(null)
-  useEffect(() => {
-    focus.current.focus()
-  })
 
   const handleChange = (e) => {
     setInput(e.target.value)
@@ -36,7 +31,6 @@ function ListForm(props) {
               name="text"
               className={ListFormstyles.inputEdit}
               onChange={handleChange}
-              ref={focus}
             />
             <button className={ListFormstyles.buttonEdit}>Rename</button>
           </div>
@@ -50,7 +44,6 @@ function ListForm(props) {
             name="text"
             className={ListFormstyles.input}
             onChange={handleChange}
-            ref={focus}
           />
           <button className={ListFormstyles.button}>Add List</button>
         </>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdClose } from 'react-icons/md'
-import { MdOutlineEditNote } from 'react-icons/md'
+// import { MdOutlineEditNote } from 'react-icons/md'
 import Itemsstyles from './Items.module.css'
 
 function Items({ items, completeItem, removeItem }) {
@@ -23,11 +23,11 @@ function Items({ items, completeItem, removeItem }) {
             item.isComplete ? Itemsstyles.completedIcon : Itemsstyles.deleteIcon
           }
         />
-        <MdOutlineEditNote
+        {/* <MdOutlineEditNote
           className={
             item.isComplete ? Itemsstyles.completedIcon : Itemsstyles.editIcon
           }
-        />
+        /> */}
       </div>
     </div>
   ))
