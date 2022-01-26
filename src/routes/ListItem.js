@@ -5,15 +5,19 @@ import ListItemstyles from './ListItem.module.css'
 import ListItemForm from './ListItemForm'
 import Items from './Items'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { useEffect, useState } from 'react/cjs/react.development'
 
 export const ListItem = () => {
   const [items, setItems] = useLocalStorage('items', [])
+  const [data, setData] = useState([])
 
   const params = useParams()
   const listItem = getListItem(params.id)
 
-  const result = { ...listItem, items: items }
-  console.log(result)
+  useEffect(() => {
+    const listWithItems = { ...listItem, items: items }
+    setData(localStorage.setItem('list-items', JSON.stringify(listWithItems)))
+  }, [items])
 
   const addItem = (item) => {
     const newItems = [item, ...items]
