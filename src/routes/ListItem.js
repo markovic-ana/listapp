@@ -15,9 +15,14 @@ export const ListItem = () => {
   const listItem = getListItem(params.id)
 
   useEffect(() => {
+    addToLS()
+  }, [items])
+
+  const addToLS = () => {
     const listWithItems = { ...listItem, items: items }
     setData(localStorage.setItem('list-items', JSON.stringify(listWithItems)))
-  }, [items])
+    console.log(listWithItems)
+  }
 
   const addItem = (item) => {
     const newItems = [item, ...items]
