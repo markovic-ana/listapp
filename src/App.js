@@ -10,7 +10,7 @@ function App() {
         <Header />
         <List />
       </div>
-      <footer>List, 2022 &copy;</footer>
+      <footer>List &copy;, 2022 </footer>
     </div>
   )
 }
