@@ -14,7 +14,6 @@ export const ListItem = () => {
   const params = useParams()
   const listItem = getListItem(params.id)
   const listWithItems = { ...listItem, items: items }
-  const get = JSON.parse(localStorage.getItem('todos'))
 
   useEffect(() => {
     addToLS()
