@@ -14,6 +14,7 @@ function ListForm(props) {
     props.onSubmit({
       id: Math.random().toString(36).substr(2, 5),
       text: input,
+      items: [],
     })
 
     setInput('')
