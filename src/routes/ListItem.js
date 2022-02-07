@@ -28,6 +28,10 @@ export const ListItem = () => {
     if (list) {
       list['items'] = []
       list['items'].push(items)
+      const dataFromStorage = JSON.parse(localStorage.getItem('todos'))
+      const index = dataFromStorage.findIndex((d) => d.id === list.id)
+      dataFromStorage[index] = Object.assign({}, dataFromStorage[index], list)
+      localStorage.setItem('todos', JSON.stringify(dataFromStorage))
     }
   }, [items])
 
