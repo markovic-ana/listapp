@@ -15,7 +15,6 @@ export const ListItem = () => {
 
   useEffect(() => {
     const getListFromLS = JSON.parse(localStorage.getItem('todos'))
-
     const checkID = (list) => list.id === listID
     const matchingList = getListFromLS.filter(checkID)
 
@@ -59,6 +58,7 @@ export const ListItem = () => {
       <div className={ListItemstyles.top}>{listItem.text}</div>
       <ListItemForm onSubmit={addItem} />
       <Items
+        list={list}
         items={items}
         completeItem={completeItem}
         removeItem={removeItem}
